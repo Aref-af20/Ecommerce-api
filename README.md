@@ -27,7 +27,8 @@ This project provides core e-commerce functionalities, including user authentica
 | Python | Programming language |
 | Django 6.1.2 | Backend framework |
 | Django REST Framework | REST API development |
-| SQLite | Database |
+| PostgreSQL | Database |
+| psycopg | PostgreSQL adapter |
 | Simple JWT | JWT authentication |
 | Celery | Asynchronous task processing |
 | RabbitMQ | Message broker |
@@ -105,11 +106,16 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Apply database migrations
+### 4. Configure PostgreSQL
+
+This project uses PostgreSQL as its primary database.
+
+Configure your database credentials in `core/settings.py`.
+
+Run database migrations:
 
 ```bash
 python manage.py migrate
-```
 
 ### 5. Create a superuser
 
