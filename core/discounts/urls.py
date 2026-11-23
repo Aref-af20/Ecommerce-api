@@ -4,5 +4,5 @@ app_name = 'discounts'
 
 
 urlpatterns = [
-    path('api/', include('discounts.api.urls'))
+    path('api/v1/', include('discounts.api.urls'))
 ]

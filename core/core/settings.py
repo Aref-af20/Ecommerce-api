@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'products',
     'discounts',
     'cart',
+    'orders',
 
     #external_apps
     'rest_framework',
@@ -137,6 +138,7 @@ MAILERS = {
     },
 }
 
+DEFAULT_FROM_EMAIL = 'shop@example.com'
 
 AUTH_USER_MODEL = 'accounts.User'
 
@@ -171,3 +173,14 @@ SIMPLE_JWT = {
     "BLACKLIST_AFTER_ROTATION": False,
     "UPDATE_LAST_LOGIN": False,
 }
+
+
+CELERY_BROKER_URL = "amqp://guest:guest@localhost:5672//"
+
+CELERY_ACCEPT_CONTENT = ["json"]
+
+CELERY_TASK_SERIALIZER = "json"
+
+CELERY_RESULT_SERIALIZER = "json"
+
+CELERY_TIMEZONE = "Asia/Tehran"
