@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'accounts',
     'products',
     'discounts',
+    'cart',
 
     #external_apps
     'rest_framework',
